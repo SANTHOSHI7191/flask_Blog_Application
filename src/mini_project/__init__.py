@@ -7,9 +7,6 @@ from flask_jwt_extended import JWTManager,create_access_token,jwt_required,get_j
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
-
-
-
 db_url = f"mongodb+srv://nexturn-db:WIObj0a299SvgCXK@cluster0.79xwdan.mongodb.net/?appName=Cluster0"
 
 mongo_client = MongoClient(db_url) 
@@ -96,7 +93,7 @@ def create_blog():
 
     blog_id = generate_id("BLOG")
 
-    now = datetime.now(ZoneInfo("Asia/Kolkata"))
+    now = datetime.now(ZoneInfo("Africa/delhi"))
     blogs.insert_one({
         "blog_id": blog_id,
         "title": title,
